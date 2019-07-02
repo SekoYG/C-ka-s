@@ -1,0 +1,214 @@
+@font-face{
+    src: url(fonts/LuckiestGuy-Regular.ttf);
+    font-family: luc;
+    }
+*{
+    margin: 0;
+    padding: 0;
+    }
+body{
+    width: 100%;
+    background-color: white;
+    }
+nav{
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    border-bottom: 2px dashed black;
+    }
+.navList{
+    padding-left:50% ;
+    line-height: 50%;
+    }
+.navList li{
+    display: inline-block;
+    float: left;
+    margin:20px;
+    
+    }
+.navList li a{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-family:sans-serif;
+        
+    }
+.navList li a:hover{
+    color:darkgrey;
+
+    }
+.logo{
+    position: absolute;
+    width: 100px;
+    float: right;
+    }
+
+#name{
+    font-family: luc;
+    position: relative;
+    text-align: center;
+    font-size: 100px;
+    top: 50px;
+    background-color:darkgray;
+    padding: 10px;
+    margin: 0px;
+}
+.outer-container{
+    position:relative; 
+    left: 160px;
+    top: 75px;
+    width: 960px;
+    
+}
+    
+        .imgs{
+            position: relative;
+            width: 60px;
+        }
+        .inner-container img{
+            background-color: grey;
+            position: relative;
+            width: 960px;
+            overflow: hidden;
+            display:none;
+            
+        }
+        .inner-container img.imgs{
+            display: inline-block;
+        }
+        
+        .imgs{
+            display:inline-block;
+            position: absolute;
+            border: 3px solid darkgrey;
+            border-radius: 20px;
+        }
+.backimg{
+    position: absolute;
+    width:99%;
+    left: 4px;
+    top: 975px;
+    opacity: 0.7;
+    z-index: 0;
+    border: 3px solid darkgrey;
+    margin: 0px;
+    padding: 0px;
+}
+        
+.follow{
+    position: relative;
+    width: 500px;
+    left: 100px;
+    top: 300px;
+    list-style: none;
+    line-height: 40px;
+    }
+.follow a{
+    text-decoration: none;
+    font-family: luc;
+    font-size: 40px;
+    color: black;
+    }
+.headList{
+    font-size: 32px;
+    font-family: luc;
+    }
+.midbox{
+    position: relative;
+    width: 800px;
+    height: 50px;
+    left: 250px;
+    top: 150px;
+    background-color:darkgrey;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 50px;
+    font-family: luc;
+    padding: 20px;
+    z-index: 1;
+}
+.leftbox{
+    position: absolute;
+    width: 50px;
+    height: 500px;
+    top: 400px;
+    background-color: darkgrey;
+}
+.rightbox{
+    position: absolute;
+    width: 50px;
+    height: 500px;
+    top: 400px;
+    background-color: darkgrey;
+    right:0px; 
+}
+#playlist li a{
+    text-decoration: none;
+    color: black;
+    
+}
+.songs{
+    position: relative;
+    left: 850px;
+    top: 50px;
+    font-size: 40px;
+    text-decoration: none;
+    font-family: luc;
+    list-style: none;
+    box-sizing: border-box;
+    width: 400px;
+}
+#playlist .current-song a{
+    color: grey;
+    background-color: black;
+    padding: 0px 10px 0px;
+}
+#audioplayer{
+    position: absolute;
+    right: 120px;
+    
+}
+
+
+.buttomBox{
+    position: relative;
+    width: 1200px;
+    height: 30px;
+    top: 200px;
+    left: 13px;
+    background-color:black;
+    text-align: center;
+    font-family: luc;
+    font-size: 30px;
+    padding: 20px;
+    border-radius: 20px;
+    }
+
+.contact{
+    font-family: luc;
+    font-size: 60px;
+    color: darkgray;
+    text-align: center;
+}
+.contacts{
+    position: relative;
+    width: 500px;
+    font-family: luc;
+    font-size: 30px;
+    padding: 20px;
+    background-color: darkgray;
+    border-radius: 20px;
+    top: 100px;
+    left: 200px;
+}
+.formbox{
+    background-color: darkgray;
+    padding: 20px;
+    width: 500px;
+    border-radius: 20px;
+    position: relative;
+    top: 200px;
+    left: 200px;
+    font-family: luc;
+    margin: 20px;
+}

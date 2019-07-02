@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8">
+        <title>C-KA TopGunner</title>
+        <meta  name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+            </head>  
+
+    <body>
+        <nav>
+            <img src="photos/CKA%20Logo.jpeg" class="logo">
+            <ul class= "navList">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portofolio.html">Portofolio</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            
+        </nav>
+        <div class="topname">
+        <h1 id="name">C-KA TopGunner</h1>
+        </div>
+                <div class="outer-container">
+        <div class="inner-container">
+            <img src="photos/a1.jpg" class="imgs" id="numone">
+            <img src="photos/a3.jpg">
+            <img src="photos/a6.jpg">
+            <img src="photos/a4.jpg">
+            <img src="photos/a5.jpg" id="numend">
+        </div>
+        </div>
+        <div class="midbox">Best Rapper In Egypt
+        </div>
+        <img class="backimg" src="photos/_MG_5920.JPG">
+        
+        <ul class="follow"><span class="headList">Follow me on social media</span>
+            <li><a href="#">FaceBook</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">SoundCloud</a></li>
+            <li><a href="#">Anghamy</a></li>
+            <li><a href="#">YouTube</a></li>
+        </ul>
+        <div>
+            <audio src="" controls id="audioplayer"></audio>
+            <ul class="songs" id="playlist"><span class="headList" >Listen to me</span>
+                <li class="current-song"><a href ="photos/CKA%20Habebtiy%20fin.mp3">Habibty</a></li>
+                <li><a href ="photos/C-ka%20TopGunner%20-%20O'Dreams%20-%D8%A3%D8%AD%D9%84%D8%A7%D9%85%D9%86%D8%A7.wav">A7lamna</a></li>
+                <li><a href ="photos/C-Ka-%20Wo7oush.mp3">Wo7osh</a></li>
+                <li><a href= "photos/C-ka%20Top%20Gunner%20-%20Why!.wav">Leih</a></li>
+            </ul>
+        </div>
+        <div class="rightbox"></div>
+        <div class="leftbox"></div>
+        
+        <div class="buttomBox">
+            <p style="color: white">This is the best website for an Egyptain Rapper</p>
+        </div>
+            
+        </body>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script>
+           $(document).ready(function(){
+        var interval;
+            function startSlider(){
+              interval= setInterval(function(){
+                    console.log("loser")
+                    var current = $(".imgs");
+                    var nxt = current.next();
+                    var reset =$("#numone");
+
+                    if(nxt.length){
+                        current.removeClass("imgs").css("z-index",-10);
+                        nxt.addClass("imgs").css("z-index",10);
+                   }
+                    if(nxt.length == 0){
+                        current.removeClass("imgs").css("z-index",-10);
+                        reset.addClass("imgs").css("z-indez",10);
+                    }
+
+                },3000)    
+                    }
+            startSlider();
+            function Stop(){
+                clearInterval(interval);
+            }
+            $("img").on("mouseenter",Stop).on("mouseleave",startSlider);
+            $("button").on("mouseenter",Stop).on("mouseleave",startSlider);
+        
+    <!--- audioplayer functions--->
+               audioplayer();
+        function audioplayer(){
+            var currentsong =0;
+        $("#audioplayer")[0].src= $("#playlist li a ")[0];
+        $("#playlist li a").click(function(e){
+            e.preventDefault();
+        $("#audioplayer")[0].src= this;
+            $("#audioplayer")[0].play();
+            $("#playlist li").removeClass("current-song");
+            currentsong = $(this).parent().index();
+            $(this).parent().addClass("current-song");
+        });
+        $("#audioplayer")[0].addEventListener("ended",function(){ currentsong++;                                          if(currentsong==$("#playlist li a").length)
+            currentsong=0;
+        
+         $("#playlist li").removeClass("current-song");
+         $("#playlist li:eq("+currentsong+") ")[0].add
+                                                                 Class("current-song");
+         $("#audioplayer").src=$("#playlist li a")[currentsong].href;
+         $("#audioplayer")[0].play();                           console.log("why");                              
+            
+        });
+            
+        }
+           
+           
+           });
+        
+        </script>
+</html>
